@@ -1,9 +1,30 @@
+import Barchart from "@/components/charts/barchart";
+import Piechart from "@/components/charts/piechart";
 import Head from "next/head";
 
-export default function Guarantee() {
+export default function Approvals() {
   return (
     <>
-      <p>Gaurantee</p>
+      <div className="row">
+        <div className="col-6">
+          <div className="card">
+            <div className="card-body text-center text-warning">
+              <div className="chart-wrapper">
+                <Barchart />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-6">
+          <div className="card">
+            <div className="card-body text-center text-warning">
+              <div className="chart-wrapper">
+                <Piechart />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
